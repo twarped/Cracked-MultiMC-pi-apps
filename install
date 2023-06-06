@@ -181,6 +181,7 @@ status "Downloading the Cracked-MultiMC5 Source Code directly from the official 
 git clone --recursive https://github.com/twarped/Launcher.git src
 cd src || error "Could not move to directory"
 git remote set-url origin https://github.com/twarped/Launcher.git
+git fetch
 git checkout --recurse-submodules master || error "Could not checkout master branch"
 git pull --recurse-submodules || error "Could Not Pull Latest Cracked-MultiMC Source Code, verify your ~/Cracked-MultiMC/src directory hasn't been modified. You can detete the  ~/Cracked-MultiMC/src folder to attempt to fix this error."
 git checkout --recurse-submodules $commit_id || error "Could Not Checkout Cracked-MultiMC Source Code commit, verify your ~/Cracked-MultiMC/src directory hasn't been modified. You can detete the  ~/Cracked-MultiMC/src folder to attempt to fix this error."

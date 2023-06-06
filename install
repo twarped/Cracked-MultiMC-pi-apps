@@ -2,7 +2,7 @@
 # NOTE: This build is NOT a fork BUT it does use a custom native library repo for the arm64/armhf builds, which is necessary as microsoft and the multimc5 devs do not provide arm64/armhf native libraries
 
 #github commit id:
-commit_id=85e8a04db24d3446e9b75cfad72a39ed736e9366
+commit_id=6cd6527450cf32398bbfdb334f87ace60c097883
 
 # obtain model name
 if [[ -d /system/app/ && -d /system/priv-app ]]; then
@@ -182,7 +182,7 @@ git clone --recursive https://github.com/twarped/Launcher.git src
 cd src || error "Could not move to directory"
 git remote set-url origin https://github.com/twarped/Launcher.git
 git fetch
-git checkout --recurse-submodules master || error "Could not checkout master branch"
+git checkout --recurse-submodules develop || error "Could not checkout develop branch"
 git pull --recurse-submodules || error "Could Not Pull Latest Cracked-MultiMC Source Code, verify your ~/Cracked-MultiMC/src directory hasn't been modified. You can detete the  ~/Cracked-MultiMC/src folder to attempt to fix this error."
 git checkout --recurse-submodules $commit_id || error "Could Not Checkout Cracked-MultiMC Source Code commit, verify your ~/Cracked-MultiMC/src directory hasn't been modified. You can detete the  ~/Cracked-MultiMC/src folder to attempt to fix this error."
 # add secrets files

@@ -1,8 +1,9 @@
 #!/bin/bash
+#look at the comment below, but it's not mine, and this technically is a fork.
 # NOTE: This build is NOT a fork BUT it does use a custom native library repo for the arm64/armhf builds, which is necessary as microsoft and the multimc5 devs do not provide arm64/armhf native libraries
 
 #github commit id:
-commit_id=3a6e64fb653fe46831fe22841e44ae956a8a7573
+commit_id=ccb5d1bfdc1c18e08ed81344066107069b0629a5
 
 # obtain model name
 if [[ -d /system/app/ && -d /system/priv-app ]]; then
